@@ -11,6 +11,17 @@ import './style.css'
 //   setupCountdownButton(redirectButtonContainerDiv);
 // }
 
-setTimeout(() => {
-  window.location.href = "https://www.nikodunixi.com/";
-}, 1000 * 15);
+const main = () => {
+  const hostname = new URL(window.location.href).hostname;
+  if (hostname == "localhost") {
+    console.log('is localhost, will not redirect')
+    return;
+  }
+  const millis = 1000 * 15
+  console.log('setting timeout millis', millis);
+  setTimeout(() => {
+    window.location.href = "https://www.nikodunixi.com/";
+  }, millis);
+}
+
+main();
