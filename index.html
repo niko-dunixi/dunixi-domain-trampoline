@@ -3,22 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Dunixi Trampoline</title>
-    <link rel="stylesheet" href="style.css">
+    <title>The Dunixi Domain Trampoline</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-    <h2 class="text-left">Hello! 👋🏼</h2>
-    <div class="text-justify">
-      You've reached one of my older domains. For reasons I'll openly share later
-      I'm migrating to a new domain!
-    </div>
-    <div class="text-right">
-      <div>Please click through to</div>
-      <div>
-        <a href="https://www.nikodunixi.com">https://www.nikodunixi.com</a>
+  <body class="w-[100vw] h-[100vh] bg-emerald-900 flex justify-center items-center">
+    <div class="w-1/4 bg-teal-700 text-white rounded-lg p-10 flex flex-col gap-12 drop-shadow-2xl border border-4 border-teal-100">
+      <h2 class="text-3xl">Hello! 👋🏼</h2>
+      <div class="text-justify">
+        You've reached one of my older domains. For reasons I'll openly share later
+        I'm migrating to a new domain!
+      </div>
+      <div class="flex flex-row justify-end">
+        <div class="text-right text-teal-50">
+          <div class="text-xs">
+            You will automatically redirected...
+          </div>
+          <div>
+            <a
+              class="text-xl underline bold"
+              href="https://www.nikodunixi.com"
+            >
+              https://www.nikodunixi.com
+            </a>
+          </div>
+        </div>
+        <div id="redirect-button-container">
+        </div>
       </div>
     </div>
   </body>
