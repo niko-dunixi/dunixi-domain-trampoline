@@ -1,27 +1,23 @@
 import './style.css'
+import { render } from 'solid-js/web';
+import RedirectText  from './RedirectText';
 
 // const url = new URL(window.location.href);
 // if (url.host.endsWith("paulfreaknbaker.com")) {
 //   url.host = url.host.replaceAll("paulfreaknbaker.com", "nikodunixi.com");
 //   window.location.href = url.toString();
 // }
-
-// const redirectButtonContainerDiv: HTMLElement | null = window.document.getElementById('redirect-button-container');
 // if (redirectButtonContainerDiv != null && redirectButtonContainerDiv instanceof HTMLDivElement) {
 //   setupCountdownButton(redirectButtonContainerDiv);
 // }
 
 const main = () => {
-  const hostname = new URL(window.location.href).hostname;
-  if (hostname == "localhost") {
-    console.log('is localhost, will not redirect')
+  const redirectButtonContainerDiv: HTMLElement | null = window.document.getElementById('redirect-button-container');
+  if (redirectButtonContainerDiv == null) {
+    console.warn("The root element for the redirect button was null!");
     return;
   }
-  const millis = 1000 * 15
-  console.log('setting timeout millis', millis);
-  setTimeout(() => {
-    window.location.href = "https://www.nikodunixi.com/";
-  }, millis);
-}
+  render(() => <RedirectText seconds={15} destination={new URL("https://www.nikodunixi.com")}/>, redirectButtonContainerDiv);
+};
 
 main();
